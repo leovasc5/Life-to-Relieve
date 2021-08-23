@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="https://freepikpsd.com/media/2019/10/Python-PNG-File.png"/>
     <title>Agenda</title>
+    {% load static %}
+    <link href="{% static "css/header.css" %}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
-<div align="right">
-    <a href="/logout">logout</a>
+<div class="header">
+    <div align="right">
+        <a href="/logout">logout</a>
+    </div>
+    <h1 class="tituloApp">AGENDA</h1>
 </div>
-<h1>AGENDA</h1>
