@@ -5,12 +5,33 @@
     <a href="evento/">
         <input type="button" value="Novo Evento"/>
     </a>
-    <ul>
-    {% for evento in eventos %}
-        <li>{{ evento.titulo }} - {{ evento.get_data_criacao }}
-            (<a href="evento/?id={{ evento.id }}"> Editar </a> / <a href="evento/delete/{{ evento.id }}"> Excluir </a>)
-        </li><br>
-    {% endfor %}
-    </ul>
+    <br><br>
+        {% for evento in eventos %}
+        {% if evento.get_evento_atrasado %}
+            <div class="atrasado"
+            <ul>
+                <li>{{ evento.titulo }} - {{ evento.get_data_criacao }}
+        {% else %}
+            <div class="emDia">
+                <li>{{ evento.titulo }} - {{ evento.get_data_criacao }}
+        {% endif %}
+                    (<a href="evento/?id={{ evento.id }}"> Editar </a> / <a href="evento/delete/{{ evento.id }}"> Excluir </a>)
+                </li>
+            </ul>
+            </div>
+            <br>
+        {% endfor %}
+
+
+    <style>
+        .atrasado{
+            color: red;
+        }
+
+        .emDia{
+            color: green;
+        }
+    </style>
 {% endblock %}
+
 
