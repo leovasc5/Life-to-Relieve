@@ -1,0 +1,46 @@
+.atrasado{
+    background-color: #e66565;
+}
+
+.emDia{
+   background-color: #008000;
+}
+
+.hoje{
+   background-color: #8cd3ff;
+}
+
+.perimetro{
+   padding: 32px;
+   padding-left: 64px;
+}
+
+.btn_nv{
+   padding: 16px;
+   background-color: #86d01c;
+   border: none
+}
+
+.btn_nv:hover{
+   background-color: #a2ebd0;
+   cursor: pointer;
+}
+
+.tabela{
+   padding-left: 64px;
+}
+
+.tabela td, .tabela th {
+   border: 1px solid #ddd;
+   padding: 8px;
+}
+ 
+.tabela tr:hover {background-color: #ddd;}
+ 
+.tabela th {
+   padding-top: 12px;
+   padding-bottom: 12px;
+   text-align: left;
+   background-color: #0201f1;
+   color: white;
+}
