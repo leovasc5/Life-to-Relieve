@@ -1,0 +1,30 @@
+.box_login{
+    padding: 82px;
+}
+
+.box_login input{
+    margin-bottom: 32px;
+    border: none;
+    border-bottom: 1px solid #000;
+    background-color: transparent;
+    outline: none;
+}
+
+#ms{
+    font-size: 12px;
+    font-weight: 200;
+    margin-top: -3px;
+}
+
+.submit_btn{
+    background-color: transparent;
+    padding: 12px;
+    text-align: center;
+    border: none;
+}
+
+.submit_btn:hover{
+    background-color: #86d01c;
+    color: #f4f4f4;
+    cursor: pointer;
+}

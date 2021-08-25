@@ -1,18 +1,24 @@
 .atrasado{
-    background-color: #e66565;
+    background-color: #ecabab;
 }
 
 .emDia{
-   background-color: #008000;
+   background-color: #c8e9dd;
 }
 
 .hoje{
    background-color: #8cd3ff;
 }
 
+.pencil{
+   text-decoration: none;
+   color: #000;
+}
+
 .perimetro{
    padding: 32px;
-   padding-left: 64px;
+   display: table;
+   margin: 0 auto;
 }
 
 .btn_nv{
@@ -27,7 +33,9 @@
 }
 
 .tabela{
-   padding-left: 64px;
+   margin: 0 auto;
+   padding-top: 32px;
+   width: 60%;
 }
 
 .tabela td, .tabela th {
@@ -43,4 +51,29 @@
    text-align: left;
    background-color: #0201f1;
    color: white;
+}
+
+.tabela td{
+   padding: 12px;
+}
+
+.tabela td:hover{
+   cursor: pointer;
+}
+
+.tabela .transp{
+   background-color: #f4f4f4;
+   border: none;
+}
+
+::-webkit-scrollbar-track {
+ background-color: #f4f4f4;
+}
+::-webkit-scrollbar {
+ width: 8px;
+ background: #000;
+}
+::-webkit-scrollbar-thumb {
+ background: #3f3fad;
+ border-radius: 16px;
 }

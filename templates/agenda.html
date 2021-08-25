@@ -1,19 +1,14 @@
 {% extends "model-page.html" %}
 
 {% block content %}
-    <div class="perimetro">
-        <a href="evento/">
-            <input type="button" class="btn_nv" value="Novo Evento"/>
-        </a>
-    </div>
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <table class="tabela">
         <tr>
             <th>Evento</th>
             <th>Descrição</th>
             <th>Local</th>
             <th>Data</th>
-            <th>Editar</th>
-            <th>Excluir</th>
         </tr>
         {% for evento in eventos %}
         {% if evento.get_evento_atrasado %}
@@ -34,11 +29,11 @@
                     {% endif %}
                 </td>
                 <td>{{ evento.data_evento }}</td>
-                <td>
-                    <a href="evento/?id={{ evento.id }}"> Editar </a>
+                <td class="transp">
+                    <a href="evento/?id={{ evento.id }}" class="pencil"> ✎ </a>
                 </td>
-                <td>
-                    <a href="evento/delete/{{ evento.id }}"> Excluir </a>
+                <td class="transp">
+                    <a href="evento/delete/{{ evento.id }}"> <i style="font-size:24px;color:#000;" class="fa">&#xf014;</i> </a>
                 </td>
             </tr>
         {% elif evento.get_evento_dia %}
@@ -59,11 +54,11 @@
                     {% endif %}
                 </td>
                 <td>{{ evento.data_evento }}</td>
-                <td>
-                    <a href="evento/?id={{ evento.id }}"> Editar </a>
+                <td class="transp">
+                    <a href="evento/?id={{ evento.id }}" class="pencil"> ✎ </a>
                 </td>
-                <td>
-                    <a href="evento/delete/{{ evento.id }}"> Excluir </a>
+                <td class="transp">
+                    <a href="evento/delete/{{ evento.id }}"> <i style="font-size:24px;color:#000;" class="fa">&#xf014;</i> </a>
                 </td>
             </tr>
         {% else %}
@@ -85,17 +80,20 @@
                     {% endif %}
                 </td>
                 <td>{{ evento.data_evento }}</td>
-                <td>
-                    <a href="evento/?id={{ evento.id }}"> Editar </a>
+                <td class="transp">
+                    <a href="evento/?id={{ evento.id }}" class="pencil"> ✎ </a>
                 </td>
-                <td>
-                    <a href="evento/delete/{{ evento.id }}"> Excluir </a>
+                <td class="transp">
+                    <a href="evento/delete/{{ evento.id }}"> <i style="font-size:24px;color:#000;" class="fa">&#xf014;</i> </a>
                 </td>
             </tr>
         {% endif %}
         {% endfor %}
     </table>
+    <div class="perimetro">
+        <a href="evento/">
+            <input type="button" class="btn_nv" value="Novo Evento"/>
+        </a>
+    </div>
 
 {% endblock %}
-
-

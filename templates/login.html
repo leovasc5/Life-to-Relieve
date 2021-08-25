@@ -1,27 +1,24 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <link rel="shortcut icon" href="https://freepikpsd.com/media/2019/10/Python-PNG-File.png"/>
-    <title>Agenda</title>
-</head>
-<body>
-    <h1>Login</h1>
+{% extends "model-page.html" %}
 
-    <div align="center">
+{% block content %}
+{% load static %}
+<link href="{% static "css/login.css" %}" rel="stylesheet">
+    <div align="center" class="box_login">
         <form action="submit" method="POST">{% csrf_token %}
-            <label><b>Usuário: </b</label>
-            <input type="text" name="username"/>
-            <br><br>
-            <label><b>Senha: </b></label>
-            <input type="password" name="password"/>
-            <br><br>
-            <button type="submit">Entrar</button>
+            <label><b>Usuário</b</label><br>
+            <input type="text" name="username" id="user" autocomplete="off"/><br>
+            
+            <label><b>Senha</b></label><br>
+            <input type="password" name="password" id="senha"/><br>
+            <input type="checkbox" onclick="showPassword()"><label id="ms">Mostrar Senha</label>
+            
+            <br>
+            <button type="submit" class="submit_btn">Entrar</button>
         </form>
         {% for message in messages %}
             <br><br>
             <strong>Erro: </strong> {{ message }}
         {% endfor %}
     </div>
-</body>
-</html>
+    <script src="{% static "js/login.js" %}"></script>
+{% endblock %}

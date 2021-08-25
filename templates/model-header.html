@@ -16,9 +16,15 @@
 </head>
 <body>
 <div class="header">
+    {% if request.user.is_authenticated %}
     <div align="right" class="logout">
         <a href="/logout">Sair</a>
     </div>
+    {% else %}
+    <div align="right" class="logout">
+        <br>
+    </div>
+    {% endif %}
     <h1 class="tituloApp">Life to Relieve</h1>
     <h2 class="subApp">Created by Leonardo Vasconcelos Paulino</h2>
 </div>
