@@ -32,3 +32,15 @@ body{
 .logout a:hover{
     color: #f73e41;
 }
+
+::-webkit-scrollbar-track {
+ background-color: #f4f4f4;
+}
+::-webkit-scrollbar {
+ width: 8px;
+ background: #000;
+}
+::-webkit-scrollbar-thumb {
+ background: #3f3fad;
+ border-radius: 16px;
+}

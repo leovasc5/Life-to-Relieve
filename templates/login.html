@@ -14,10 +14,13 @@
             
             <br>
             <button type="submit" class="submit_btn">Entrar</button>
+            <div class="btn_register">
+                <button type="button" onclick="window.open('/register', '_self');" class="btn_register">Cadastre-se</button>
+            </div>
         </form>
         {% for message in messages %}
             <br><br>
-            <strong>Erro: </strong> {{ message }}
+            <strong>Aviso: </strong> {{ message }}
         {% endfor %}
     </div>
     <script src="{% static "js/login.js" %}"></script>

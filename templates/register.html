@@ -1,0 +1,32 @@
+{% extends "model-page.html" %}
+
+{% block content %}
+<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% load static %}
+<link href="{% static "css/register.css" %}" rel="stylesheet">
+<div align="center" class="box_login">
+    <form action="submit" method="POST">{% csrf_token %}
+        <label><b>Usuário</b</label><br>
+        <input type="text" name="username" id="user" autocomplete="off"/><br>
+        
+        <label><b>Senha</b></label><br>
+        <input type="password" name="password" id="senha" required/><br>
+        <input type="checkbox" onclick="showPassword(1)"><label id="ms">Mostrar Senha</label><br>
+
+        <label><b>Repita a Senha</b></label><br>
+        <input type="password" name="password2" id="senha2" required/><br>
+        <input type="checkbox" onclick="showPassword(2)"><label id="ms">Mostrar Senha</label><br>
+        
+        <button type="submit" class="submit_btn">Cadastrar</button>
+        <div class="btn_register">
+            <button type="button" onclick="window.open('/', '_self');" class="btn_register">Voltar</button>
+        </div>
+    </form>
+    {% for message in messages %}
+        <br><br>
+        <strong>Erro: </strong> {{ message }}
+    {% endfor %}
+</div>
+<script src="{% static "js/register.js" %}"></script>
+{% endblock %}

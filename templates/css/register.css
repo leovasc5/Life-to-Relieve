@@ -10,6 +10,10 @@
     outline: none;
 }
 
+.box_login input[type=password], #senha, #senha2{
+    margin-bottom: 8px;
+}
+
 #ms{
     font-size: 12px;
     font-weight: 200;

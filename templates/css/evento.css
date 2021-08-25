@@ -1,0 +1,63 @@
+.title{
+    display: table;
+    margin: 0 auto;
+    padding: 32px;
+}
+
+form{
+    display: table;
+    margin: 0 auto;
+}
+
+label{
+    display: table;
+    margin: 0 auto;
+    padding-top: 18px;
+}
+
+input{
+    width: 256px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #000;
+}
+
+input[type=datetime-local]{
+    width: 172px;
+    display: table;
+    margin: 0 auto;
+}
+
+textarea{
+    width: 256px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border: 1px solid #000;
+}
+
+#btn1, #btn2{
+    padding: 12px;
+    width: 96px;
+    display: table;
+    margin: 0 auto;
+    border: none;
+    text-decoration: none;
+}
+
+#btn2{
+    margin-bottom: 32px;
+}
+
+#btn1:hover{
+    background-color: #86d01c;
+    color: #f4f4f4;
+    cursor: pointer;
+}
+
+#btn2:hover{
+    background-color: #e88b8b;
+    color: #f4f4f4;
+    cursor: pointer;
+}

@@ -13,6 +13,8 @@
 .pencil{
    text-decoration: none;
    color: #000;
+   font-weight: 900;
+   font-size: 22px;
 }
 
 .perimetro{
@@ -64,16 +66,4 @@
 .tabela .transp{
    background-color: #f4f4f4;
    border: none;
-}
-
-::-webkit-scrollbar-track {
- background-color: #f4f4f4;
-}
-::-webkit-scrollbar {
- width: 8px;
- background: #000;
-}
-::-webkit-scrollbar-thumb {
- background: #3f3fad;
- border-radius: 16px;
 }

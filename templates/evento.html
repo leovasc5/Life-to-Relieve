@@ -1,27 +1,29 @@
 {% extends 'model-page.html' %}
 
 {% block content %}
-
-<h2>Evento</h2>
+{% load static %}
+<link href="{% static "css/evento.css" %}" rel="stylesheet">
+<h2 class="title">Criar Evento</h2>
 <form action="submit/" method="POST">
     {% csrf_token %}
     <input type="text" name="id_evento" value="{{ evento.id }}" hidden/>
-    <label>Título: </label>
-    <input type="text" name="titulo" value="{{ evento.titulo }}"/>
-    <br><br>
-    <label>Data: </label>
+    <label><b>Título</b></label>
+    <input type="text" name="titulo" value="{{ evento.titulo }}" id="titulo" autocomplete="off"/>
+    <br>
+    <label><b>Data</b></label>
     <input type="datetime-local" name="data_evento" value="{{ evento.get_data_input }}"/>
-    <br><br>
-    <label>Local: </label>
-    <input type="text" name="local_evento" value="{{ evento.local_evento }}"/>
-    <br><br>
-    <label>Descrição: </label><br>
+    <label><b>Local</b></label>
+    <input type="text" name="local_evento" value="{{ evento.local_evento }}" autocomplete="off"/>
+    <br>
+    <label><b>Descrição</b></label>
     <textarea name="descricao" rows="5" cols="30">{{ evento.descricao }}</textarea>
     <br><br>
-    <input type="submit" value="Salvar"/>
+    <input type="submit" value="Salvar" id="btn1"/>
+    <br>
+    <a href="/" style="text-decoration: none;">
+        <input type="button" value="Cancelar" id="btn2"/>
+    </a>
 </form>
-<br>
-<a href="/">
-    <input type="button" value="Cancelar"/>
-</a>
+
+<script src="{% static "js/evento.js" %}"></script>
 {% endblock %}

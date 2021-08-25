@@ -3,6 +3,8 @@
 {% block content %}
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% load static %}
+<link href="{% static "css/page.css" %}" rel="stylesheet">
     <table class="tabela">
         <tr>
             <th>Evento</th>
@@ -16,14 +18,14 @@
                 <td>{{ evento.titulo }}</td>
                 <td>
                     {% if evento.descricao == None %}
-                        Não informado...
+                        
                     {% else %}
                         {{ evento.descricao }}
                     {% endif %}
                 </td>
                 <td>
                     {% if evento.local_evento == None %}
-                        Não informado...
+                        
                     {% else %}
                         {{ evento.local_evento }}
                     {% endif %}
@@ -41,7 +43,7 @@
                 <td>{{ evento.titulo }}</td>
                 <td>
                     {% if evento.descricao == None %}
-                        Não informado...
+                        
                     {% else %}
                         {{ evento.descricao }}
                     {% endif %}
@@ -67,14 +69,14 @@
                 <td>{{ evento.titulo }}</td>
                 <td>
                     {% if evento.descricao == None %}
-                        Não informado...
+                        
                     {% else %}
                         {{ evento.descricao }}
                     {% endif %}
                 </td>
                 <td>
                     {% if evento.local_evento == None %}
-                        Não informado...
+                        
                     {% else %}
                         {{ evento.local_evento }}
                     {% endif %}
@@ -95,5 +97,4 @@
             <input type="button" class="btn_nv" value="Novo Evento"/>
         </a>
     </div>
-
 {% endblock %}

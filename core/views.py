@@ -1,13 +1,16 @@
 from django.shortcuts import render, HttpResponse, redirect
+from django.contrib.auth.models import User
 from core.models import Evento
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
-from datetime import datetime, timedelta
 from django.http.response import Http404, JsonResponse
 
 def login_user(request):
     return render(request, 'login.html')
+
+def register_user(request):
+    return render(request, 'register.html')
 
 @login_required(login_url='/login/')
 def lista_eventos(request):
@@ -26,7 +29,23 @@ def submit_login(request):
             return redirect('/')
         else:
             messages.error(request, "Usuário ou senha inválido!")
-        return redirect('/')
+        return redirect('/register')
+
+def submit_register(request):
+    if request.POST:
+        if request.POST.get('password') != request.POST.get('password2'):
+            messages.error(request, "As senhas devem ser iguais!")
+            return redirect('/register')
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        try:
+            query = User.objects.get(username=username)
+            messages.error(request, "O username já está sendo usado!")
+            return redirect('/register')
+        except:
+            User.objects.create_user(username=username, password=password)
+            messages.success(request, "Conta criada com sucesso!")
+            return redirect('/login')
 
 def logout_user(request):
     logout(request)
@@ -55,7 +74,6 @@ def submit_evento(request):
                 data_evento=data_evento,
                 local_evento=local_evento,
                 descricao=descricao,
-
             )
         else:
             Evento.objects.create(
