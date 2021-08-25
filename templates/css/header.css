@@ -1,7 +1,15 @@
+.Dark{
+    background-color: #23262d;
+}
+
 body{
     font-family: 'Urbanist', sans-serif;
     margin: 0;
     background-color: #f4f4f4;
+}
+
+.Dark .header{
+    background-color: #32394a;
 }
 
 .header{
@@ -31,6 +39,20 @@ body{
 
 .logout a:hover{
     color: #f73e41;
+}
+
+.theme{
+    margin-top: 32px;
+    margin-right: 32px;
+    background-color: transparent;
+    color: #f4f4f4;
+    font-size: 24px;
+    border: none;
+}
+
+.theme:hover{
+    color: #c4b0b0;
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar-track {

@@ -10,11 +10,24 @@
    background-color: #8cd3ff;
 }
 
+.fa{
+   font-size:24px;
+   color:#000;
+}
+
+.Dark .fa{
+   color: #f4f4f4 !important;
+}
+
 .pencil{
    text-decoration: none;
    color: #000;
    font-weight: 900;
    font-size: 22px;
+}
+
+.Dark .pencil{
+   color: #f4f4f4;
 }
 
 .perimetro{
@@ -29,9 +42,17 @@
    border: none
 }
 
+.Dark .btn_nv{
+   background-color: #a2ebd0;
+}
+
 .btn_nv:hover{
    background-color: #a2ebd0;
    cursor: pointer;
+}
+
+.Dark .btn_nv:hover{
+   background-color: #86d01c;
 }
 
 .tabela{
@@ -55,6 +76,11 @@
    color: white;
 }
 
+.Dark .tabela th{
+   background-color: #32394a;
+   border: none
+}
+
 .tabela td{
    padding: 12px;
 }
@@ -66,4 +92,8 @@
 .tabela .transp{
    background-color: #f4f4f4;
    border: none;
+}
+
+.Dark .tabela .transp{
+   background-color: #23262d;
 }

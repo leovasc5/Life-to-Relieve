@@ -4,6 +4,10 @@
     padding: 32px;
 }
 
+.Dark .title{
+    color: #f4f4f4;
+}
+
 form{
     display: table;
     margin: 0 auto;
@@ -15,12 +19,21 @@ label{
     padding-top: 18px;
 }
 
+.Dark label{
+    color: #f4f4f4;
+}
+
 input{
     width: 256px;
     background-color: transparent;
     border: none;
     outline: none;
     border-bottom: 1px solid #000;
+}
+
+.Dark input{
+    border-bottom: 1px solid #f4f4f4;
+    color: #f4f4f4;
 }
 
 input[type=datetime-local]{
@@ -35,6 +48,11 @@ textarea{
     border: none;
     outline: none;
     border: 1px solid #000;
+}
+
+.Dark textarea{
+    color: #f4f4f4;
+    border: 1px solid #f4f4f4;
 }
 
 #btn1, #btn2{
@@ -60,4 +78,8 @@ textarea{
     background-color: #e88b8b;
     color: #f4f4f4;
     cursor: pointer;
+}
+
+.Dark #btn1:hover,.Dark #btn2:hover{
+    color: #000;
 }

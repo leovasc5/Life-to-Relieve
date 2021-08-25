@@ -1,5 +1,5 @@
 .box_login{
-    padding: 137px;
+    padding: 76px;
 }
 
 .box_login input{
@@ -8,6 +8,11 @@
     border-bottom: 1px solid #000;
     background-color: transparent;
     outline: none;
+}
+
+.Dark .box_login input{
+    color: #f4f4f4;
+    border-bottom: 1px solid #f4f4f4;
 }
 
 .box_login input[type=password], #senha, #senha2{
@@ -20,11 +25,23 @@
     margin-top: -3px;
 }
 
+.Dark #ms{
+    color: #f4f4f4;
+}
+
+.Dark label{
+    color: #f4f4f4;
+}
+
 .submit_btn{
     background-color: transparent;
     padding: 12px;
     text-align: center;
     border: none;
+}
+
+.Dark .submit_btn{
+    color: #f4f4f4;
 }
 
 .submit_btn:hover{
@@ -40,6 +57,10 @@
     padding: 8px;
     text-align: center;
     border: none;
+}
+
+.Dark .btn_register{
+    color: #f4f4f4;
 }
 
 .btn_register:hover{

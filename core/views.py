@@ -29,7 +29,7 @@ def submit_login(request):
             return redirect('/')
         else:
             messages.error(request, "Usuário ou senha inválido!")
-        return redirect('/register')
+        return redirect('/login')
 
 def submit_register(request):
     if request.POST:

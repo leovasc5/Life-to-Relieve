@@ -13,17 +13,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Urbanist&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 </head>
-<body>
+<body class="mode" onload="setBtn()">
 <div class="header">
-    {% if request.user.is_authenticated %}
     <div align="right" class="logout">
-        <a href="/logout">Sair</a>
+        <button class="theme" id="modo" onclick="setModo(this.textContent)">Dark</button>
+        {% if request.user.is_authenticated %}
+            <a href="/logout">Sair</a>
+        {% endif %}
     </div>
-    {% else %}
-    <div align="right" class="logout">
-        <br>
-    </div>
-    {% endif %}
     <h1 class="tituloApp">Life to Relieve</h1>
     <h2 class="subApp">Created by Leonardo Vasconcelos Paulino</h2>
 </div>
