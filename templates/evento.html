@@ -6,7 +6,7 @@
 <h2 class="title">Criar Evento</h2>
 <form action="submit/" method="POST">
     {% csrf_token %}
-    <input type="text" name="id_evento" value="{{ evento.id }}" hidden/>
+    <input type="text" name="id_evento" id="hid" value="{{ evento.id }}" hidden/>
     <label><b>Título</b></label>
     <input type="text" name="titulo" value="{{ evento.titulo }}" id="titulo" autocomplete="off"/>
     <br>

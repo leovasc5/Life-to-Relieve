@@ -64,3 +64,49 @@
     color: #f4f4f4;
     cursor: pointer;
 }
+
+@media (max-width: 70em) {
+.box_login{
+    padding: 196px;
+}
+
+label{
+    font-size: 56px;
+    padding-bottom: 0px;
+}
+
+.box_login input[type=text], input[type=password]{
+    width: 75%;
+    font-size: 44px;
+}
+
+.box_login input[type=password], #senha{
+    margin-bottom: 8px;
+}
+
+.box_login input[type=text]{
+    margin-bottom: 128px;
+}
+
+input[type=checkbox]{
+    transform: scale(3);
+    margin-right: 36px;
+    height: 16px;
+}
+
+#ms{
+    font-size: 40px;
+    margin: 0;
+}
+
+.submit_btn{
+    font-size: 44px;
+    padding-top: 82px;
+}
+
+.btn_register{
+    padding: 32px;
+    font-size: 44px;
+}
+
+}

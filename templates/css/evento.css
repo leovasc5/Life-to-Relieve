@@ -48,6 +48,7 @@ textarea{
     border: none;
     outline: none;
     border: 1px solid #000;
+    font-family: 'Urbanist', sans-serif;
 }
 
 .Dark textarea{
@@ -82,4 +83,43 @@ textarea{
 
 .Dark #btn1:hover,.Dark #btn2:hover{
     color: #000;
+}
+
+@media (max-width: 70em) {
+.title{
+    padding: 64px;
+    font-size: 64px;
+}
+
+label{
+    font-size: 56px;
+}
+
+input[type=text], input[type=datetime-local]{
+    width: 85%;
+    font-size: 44px;
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 48px;
+}
+
+#hid{
+    display: none;
+}
+    
+textarea{
+    display: table;
+    margin: 0 auto;
+    width: 85%;
+    height: 164px;
+    font-size: 44px;
+}
+
+input[type=button], input[type=submit]{
+    display: table;
+    margin: 0 auto;
+    font-size: 64px;
+    width: 360px !important;
+}
+
 }

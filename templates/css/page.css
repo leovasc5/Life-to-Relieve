@@ -97,3 +97,19 @@
 .Dark .tabela .transp{
    background-color: #23262d;
 }
+
+@media (max-width: 70em) {
+.tabela{
+   width: 95%;
+   font-size: 30px;
+}
+
+.pencil, .fa{
+   font-size: 32px;
+}
+
+.btn_nv{
+   font-size: 32px;
+}
+
+}

@@ -63,6 +63,29 @@ body{
  background: #000;
 }
 ::-webkit-scrollbar-thumb {
- background: #3f3fad;
+    background: #3f3fad;
+    border-radius: 16px;
+}
+.Dark ::-webkit-scrollbar-thumb {
+ background: #23234e;
  border-radius: 16px;
+}
+
+@media (max-width: 70em) {
+.header{
+    height: 332px;
+}
+
+.tituloApp{
+    font-size: 64px;
+}
+
+.subApp{
+    font-size: 42px;
+}
+
+.logout a, .theme{
+    font-size: 32px;
+}
+
 }

@@ -59,5 +59,22 @@
   color:#aaa;
   margin-bottom:0;
 }
+
+@media (max-width: 70em) {
+.footer-basic .social a{
+  font-size: 64px;
+  padding: 32px;
+  display: inline-table;
+}
+
+.footer-basic ul a{
+  font-size: 48px;
+}
+
+.footer-basic .copyright{
+  font-size: 32px;
+}
+
+}
   
   /* Credit to https://epicbootstrap.com/snippets/footer-basic */
